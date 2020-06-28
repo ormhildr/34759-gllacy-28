@@ -13,7 +13,7 @@
             <div class="container">
                 <div class="site-header__top">
                     <div class="site-logo">
-                        <img class="site-logo__img" src="img/logo_gllacy.svg" alt="Логотип сайта Глейси">
+                        <img class="site-logo__img" src="img/logo_gllacy.svg" alt="Логотип сайта Глейси" width="154" height="64">
                     </div>
                     <nav class="main-navigation">
                         <ul class="main-navigation__list">
@@ -22,7 +22,7 @@
                                 <ul class="main-navigation__submenu submenu">
                                     <li class="submenu__item">Новинки</li>
                                     <li class="submenu__item">
-                                        <a href="">Сливочное</a>
+                                        <a href="catalog.html">Сливочное</a>
                                     </li>
                                     <li class="submenu__item">
                                         <a href="">Щербеты</a>
@@ -75,8 +75,10 @@
                     </div>
                 </div>
                 <div class="site-header__bottom">
-                    <p class="working-hours">с 10 до 20, ежедневно</p>
-                    <a href="tel:+78124502525">8 812 450-25-25</a>
+                    <div class="site-header__contacts">
+                        <p class="working-hours">с 10 до 20, ежедневно</p>
+                        <a href="tel:+78124502525">8 812 450-25-25</a>
+                    </div>
                 </div>
             </div>
         </header>
@@ -131,45 +133,100 @@
                         </li>
                     </ul>
                 </section>
-                <section class="catalog">
+                <section class="catalog catalog-main">
+                    <h2 class="visually-hidden">Каталог мороженого</h2>
                     <ul class="catalog__list">
-                        <li class="catalog__item"></li>
-                        <li class="catalog__item"></li>
-                        <li class="catalog__item"></li>
-                        <li class="catalog__item"></li>
+                        <li class="catalog__item catalog-item">
+                            <img src="img/catalog_citrus_cream.jpg" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
+                            <p class="catalog-item__price">310 ₽<span>/кг</span></p>
+                            <h3 class="catalog-item__title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+                            <a class="button catalog__button" href="">Быстрый просмотр</a>
+                        </li>
+                        <li class="catalog__item catalog-item">
+                            <img src="img/catalog_chocolate_cream.jpg" alt="Сливочно-кофейное мороженое с кусочками шоколада" width="267" height="267">
+                            <p class="catalog-item__price">380 ₽<span>/кг</span></p>
+                            <h3 class="catalog-item__title">Сливочно-кофейное с кусочками шоколада</h3>
+                            <a class="button catalog__button" href="">Быстрый просмотр</a>
+                        </li>
+                        <li class="catalog__item catalog-item">
+                            <img src="img/catalog_strawberry.jpg" alt="Сливочно-клубничное мороженое с присыпкой из белого шоколада" width="267" height="267">
+                            <p class="catalog-item__price">355 ₽<span>/кг</span></p>
+                            <h3 class="catalog-item__title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
+                            <a class="button catalog__button" href="">Быстрый просмотр</a>
+                        </li>
+                        <li class="catalog__item catalog-item">
+                            <img src="img/catalog_cream_caramel.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
+                            <p class="catalog-item__price">415 ₽<span>/кг</span></p>
+                            <h3 class="catalog-item__title">Сливочное крем-брюле с карамельной подливкой</h3>
+                            <a class="button catalog__button" href="">Быстрый просмотр</a>
+                        </li>
                     </ul>
                 </section>
                 <section class="features">
                     <h2 class="features__title">Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
                     <ul class="features__list">
-                        <li class="features__item"></li>
-                        <li class="features__item"></li>
-                        <li class="features__item"></li>
-                        <li class="features__item"></li>
+                        <li class="features__item features-item">
+                            <p class="features-item__descr">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+                        </li>
+                        <li class="features__item features-item">
+                            <p class="features-item__descr">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+                        </li>
+                        <li class="features__item features-item">
+                            <p class="features-item__descr">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+                        </li>
+                        <li class="features__item features-item">
+                            <p class="features-item__descr">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+                        </li>
                     </ul>
                 </section>
-                <div class="blog">
-                    <article class="blog__article"></article>
-                    <article class="blog__mailing"></article>
+                <div class="site-blog">
+                    <article class="site-blog__article blog">
+                        <h2 class="blog__title">Новое в нашем блоге</h2>
+                        <a class="blog__link" href="">10 способов сервировки фруктовых щербетов <br> к столу</a>
+                    </article>
+                    <form class="site-blog__mailing mailing-form" action="https://echo.htmlacademy.ru" method="POST">
+                        <p class="mailing-form__descr">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+                        <label class="visually-hidden" for="mailing-mail">Адрес электронной почты</label>
+                        <input class="mailing-form__mail" id="mailing-mail" type="email" name="mail" placeholder="email@example.com">
+                    </form>
                 </div>
             </div>
-            <section class="map"></section>
+            <section class="contacts">
+                <h2 class="visually-hidden">Контакты</h2>
+                <img src="img/img_map.jpg" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург" width="1200" height="430">
+                <div class="contacts-all">
+                    <p class="contacts-all__address">Адрес главного офиса и офлайн-магазина:<span>ул. Большая Конюшенная, 19/8, Санкт-Петербург</span></p>
+                    <p class="contacts-all__phone">
+                        Для заказов по телефону: <br>
+                        <a href="tel:+78124502525">8 812 450-25-25</a><br> (с 10 до 20 ежедневно)
+                    </p>
+                    <a class="button contacts-all__button" href="">Форма обратной связи</a>
+                </div>
+            </section>
         </main>
 
         <footer class="site-footer">
             <div class="container">
                 <ul class="site-footer__socials socials">
                     <li class="socials__item">
-                        <a class="socials__link socials__link_fb" href="" target="_blank"></a>
+                        <a class="socials__link socials__link_fb" href="" target="_blank">
+                            <img src="img/icon_fb.svg" alt="Facebook" width="32" height="32">
+                        </a>
                     </li>
                     <li class="socials__item">
-                        <a class="socials__link socials__link_vk" href="" target="_blank"></a>
+                        <a class="socials__link socials__link_vk" href="" target="_blank">
+                            <img src="img/icon_vk.svg" alt="ВКонтакте" width="32" height="32">
+                        </a>
                     </li>
                     <li class="socials__item">
-                        <a class="socials__link socials__link_inst" href="" target="_blank"></a>
+                        <a class="socials__link socials__link_inst" href="" target="_blank">
+                            <img src="img/icon_inst.svg" alt="Instagram" width="32" height="32">
+                        </a>
                     </li>
                     <li class="socials__item">
-                        <a class="socials__link socials__link_tw" href="" target="_blank"></a>
+                        <a class="socials__link socials__link_tw" href="" target="_blank">
+                            <img src="img/icon_twitter.svg" alt="Twitter" width="32" height="32">
+                        </a>
                     </li>
                 </ul>
                 <ul class="site-footer__menu footer-menu">
@@ -187,7 +244,9 @@
                     </li>
                 </ul>
                 <div class="site-footer__copyright copyright">
-                    <a class="copyright__link_logo" href=""></a>
+                    <a class="copyright__link_logo" href="">
+                        <img src="img/logo_academy.svg" alt="Логотип HTML Academy" width="108" height="39">
+                    </a>
                     <p class="copyright__descr">Сделано в <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss/" target="_blank">HTML Academy</a> © 2020</p>
                 </div>
             </div>
