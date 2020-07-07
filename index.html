@@ -18,7 +18,9 @@
                     <nav class="main-navigation">
                         <ul class="main-navigation__list">
                             <li class="main-navigation__item navigation-item navigation-catalog">
-                                <a class="navigation-item__link" href="">Каталог</a>
+                                <a class="navigation-item__link" href="">
+                                    <span>Каталог</span>
+                                </a>
                                 <ul class="main-navigation__submenu submenu">
                                     <li class="submenu__item submenu-item">
                                         <a class="submenu-item__link submenu__main-link" href="">Новинки</a>
@@ -40,10 +42,14 @@
                                 </ul>
                             </li>
                             <li class="main-navigation__item navigation-item">
-                                <a class="navigation-item__link" href="">Доставка и оплата</a>
+                                <a class="navigation-item__link" href="">
+                                    <span>Доставка и оплата</span>
+                                </a>
                             </li>
                             <li class="main-navigation__item navigation-item">
-                                <a class="navigation-item__link" href="">О компании</a>
+                                <a class="navigation-item__link" href="">
+                                    <span>О компании</span>
+                                </a>
                             </li>
                         </ul>
                     </nav>
@@ -296,6 +302,26 @@
             </div>
         </footer>
     </div>
+
+    <section class="modal modal__feedback modal-feedback">
+        <h2 class="modal-feedback__title">Мы обязательно вам ответим!</h2>
+        <form class="modal-feedback__form" action="https://echo.htmlacademy.ru" method="POST">
+            <p class="modal-feedback__name">
+                <label class="visually-hidden" for="name">Ваше имя и фамилия</label>
+                <input class="feedback-name" id="name" type="text" name="name" placeholder="Имя Фамилия">
+            </p>
+            <p class="modal-feedback__mail">
+                <label class="visually-hidden" for="mail">Ваш e-mail:</label>
+                <input class="feedback-mail" id="mail" type="email" name="mail" placeholder="email@example.com">
+            </p>
+            <p class="modal-feedback__message">
+                <label class="visually-hidden" for="letter">Текст письма:</label>
+                <textarea class="feedback-message" name="letter" id="letter" placeholder="В свободной форме"></textarea>
+            </p>
+            <button class="button modal-feedback__button" type="submit">Отправить</button>
+        </form>
+        <button class="modal__close" type="button" aria-label="Закрыть"></button>
+    </section>
 
     <script src="js/script.js"></script>
 

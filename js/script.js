@@ -37,3 +37,71 @@ dotThird.addEventListener("click", function() {
     document.querySelector(".slide__item_current").classList.remove("slide__item_current");
     slideThird.classList.add("slide__item_current");
 });
+
+
+var feedbackLink = document.querySelector(".contacts-all__button");
+var feedbackModal = document.querySelector(".modal-feedback");
+if (feedbackModal !== null) {
+    var feedbackClose = feedbackModal.querySelector(".modal__close");
+    var feedbackForm = feedbackModal.querySelector(".modal-feedback__form");
+    var feedbackName = feedbackModal.querySelector(".feedback-name");
+    var feedbackMail = feedbackModal.querySelector(".feedback-mail");
+    var feedbackMessage = feedbackModal.querySelector(".feedback-message");
+
+    var isStorageSupport = true;
+    var storageName = "";
+    var storageMail = "";
+
+    try {
+        storageName = localStorage.getItem("login");
+        storageMail = localStorage.getItem("mail");
+    } catch (err) {
+        isStorageSupport = false;
+    }
+
+    feedbackLink.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        feedbackModal.classList.add("modal-show");
+
+        if (storageName) {
+            feedbackName.value = storageName;
+            feedbackMail.focus();
+        }
+        if (storageMail) {
+            feedbackMail.value = storageMail;
+            feedbackMessage.focus();
+        } else {
+            feedbackName.focus();
+        }
+
+    });
+
+    feedbackClose.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        feedbackModal.classList.remove("modal-show");
+        feedbackModal.classList.remove("modal-error");
+    });
+
+    feedbackForm.addEventListener("submit", function(evt) {
+        if (!feedbackName.value || !feedbackMail.value || !feedbackMessage.value) {
+            evt.preventDefault();
+            feedbackModal.classList.remove("modal-error");
+            feedbackModal.offsetWidth = feedbackModal.offsetWidth;
+            feedbackModal.classList.add("modal-error");
+        } else {
+            localStorage.setItem("name", feedbackName.value);
+            localStorage.setItem("mail", feedbackMail.value);
+        }
+
+    });
+
+    window.addEventListener("keydown", function(evt) {
+        if (evt.keyCode === 27) {
+            if (feedbackModal.classList.contains("modal-show")) {
+                evt.preventDefault();
+                feedbackModal.classList.remove("modal-show");
+                feedbackModal.classList.remove("modal-error");
+            }
+        }
+    });
+};
