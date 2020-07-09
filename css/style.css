@@ -1383,7 +1383,7 @@ img {
     height: 33px;
     top: -9px;
     left: -46px;
-    background-image: url(../img/cart-item-1.png);
+    background-image: url(../img/cart_item_1.png);
 }
 
 .cart-item:nth-child(2) .cart-item__name::before {
@@ -1393,7 +1393,7 @@ img {
     height: 33px;
     top: -9px;
     left: -46px;
-    background-image: url(../img/cart-item-2.png);
+    background-image: url(../img/cart_item_2.png);
 }
 
 .cart-item__amount {
@@ -1509,7 +1509,7 @@ img {
     height: 6px;
     top: 6px;
     left: 62px;
-    background-image: url(../img/arrow-breadcrumbs.svg);
+    background-image: url(../img/arrow_breadcrumbs.svg);
 }
 
 .breadcrumbs__current p {
@@ -1553,7 +1553,7 @@ img {
     font-weight: 500;
     font-size: 16px;
     color: var(--main-color-white);
-    background-image: url("../img/arrow-filter.svg");
+    background-image: url("../img/arrow_filter.svg");
     background-repeat: no-repeat;
     background-position-x: 171px;
     background-position-y: 13px;
@@ -1571,7 +1571,7 @@ img {
 .filters-sorting select:focus {
     background: var(--main-color-white);
     color: var(--blog-color);
-    background-image: url("../img/arrow-filter-active.svg");
+    background-image: url("../img/arrow_filter_active.svg");
     background-repeat: no-repeat;
     background-position-x: 171px;
     background-position-y: 13px;
@@ -1724,7 +1724,7 @@ img {
     top: 0;
     width: 26px;
     height: 26px;
-    background-image: url(../img/checkbox-off.svg);
+    background-image: url(../img/checkbox_off.svg);
     background-repeat: no-repeat;
     background-position: 0 0;
     opacity: 0.8;
@@ -1737,7 +1737,7 @@ img {
     top: 0;
     width: 26px;
     height: 26px;
-    background-image: url(../img/checkbox-on.svg);
+    background-image: url(../img/checkbox_on.svg);
     background-repeat: no-repeat;
     background-position: 0 0;
     opacity: 0.8;
@@ -1824,7 +1824,7 @@ img {
     margin-top: 6px;
     width: 7px;
     height: 12px;
-    background-image: url("../img/icon-right-small.svg");
+    background-image: url("../img/icon_right_small.svg");
     background-repeat: no-repeat;
     transform: scale(-1, 1);
 }
@@ -1861,6 +1861,6 @@ img {
     margin-top: 6px;
     width: 7px;
     height: 12px;
-    background-image: url("../img/icon-right-small.svg");
+    background-image: url("../img/icon_right_small.svg");
     background-repeat: no-repeat;
 }
