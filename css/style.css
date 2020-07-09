@@ -307,7 +307,7 @@ img {
 
 .personal-navigation__item {
     position: relative;
-    padding-bottom: 3px;
+    padding-bottom: 10px;
 }
 
 .search__form {
@@ -1329,6 +1329,7 @@ img {
     box-shadow: 0px 20px 20px var(--submenu-box-shadow);
     border-radius: 4px;
     box-sizing: border-box;
+    z-index: 20;
 }
 
 .cart-full__list {
