@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог - HTML Academy: Глейси</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -28,7 +28,7 @@
                                         <a class="submenu-item__link submenu__main-link" href="">Новинки</a>
                                         <ul class="submenu-item__list submenu-list">
                                             <li class="submenu__item submenu-list__item">
-                                                <a class="submenu-item__link" href="catalog.html">Сливочное</a>
+                                                <a class="submenu-item__link current-page__link" href="catalog.html">Сливочное</a>
                                             </li>
                                             <li class="submenu__item submenu-list__item">
                                                 <a class="submenu-item__link" href="">Щербеты</a>
@@ -101,24 +101,35 @@
                                 <ul class="cart-full__list">
                                     <li class="cart-full__item cart-item">
                                         <button class="cart-item__clear" type="button" aria-label="Убрать товар из корзины"></button>
-                                        <p class="cart-item__name">Пломбир с апельсиновым джемом</p>
+                                        <a class="cart-item__name" href="">Пломбир с апельсиновым джемом</a>
                                         <p class="cart-item__amount">1,5 кг х <span>200 руб.</span></p>
                                         <p class="cart-item__price">300 руб.</p>
                                     </li>
                                     <li class="cart-full__item cart-item">
                                         <button class="cart-item__clear" type="button" aria-label="Убрать товар из корзины"></button>
-                                        <p class="cart-item__name">Клубничный пломбир с присыпкой из белого шоколада</p>
+                                        <a class="cart-item__name" href="">Клубничный пломбир с присыпкой из белого шоколада</a>
                                         <p class="cart-item__amount">1,5 кг х <span>300 руб.</span></p>
                                         <p class="cart-item__price">450 руб.</p>
                                     </li>
                                 </ul>
-                                <p class="cart-full__total">Итого:750 руб.</p>
+                                <p class="cart-full__total">Итого: 750 руб.</p>
                                 <a class="button cart-full__button" href="">Оформить заказ</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="site-header__bottom">
+                <div class="site-header__bottom catalog-header__bottom">
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs__item">
+                            <a href="index.html">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="">Каталог</a>
+                        </li>
+                        <li class="breadcrumbs__item breadcrumbs__current">
+                            <p>Сливочное</p>
+                        </li>
+                    </ul>
                     <div class="site-header__contacts">
                         <p class="working-hours">с 10 до 20, ежедневно</p>
                         <a href="tel:+78124502525">8 812 450-25-25</a>
@@ -127,7 +138,8 @@
             </div>
         </header>
 
-        <main class="catalog-main">
+        <main class="site-main">
+
             <h1 class="catalog-main__title">Сливочное мороженое</h1>
             <section class="catalog-filters">
                 <h2 class="visually-hidden">Сортировка товаров</h2>
@@ -144,10 +156,13 @@
                     <fieldset class="catalog-filters__range range-controls">
                         <legend class="range-controls__title">Цена: 100 ₽ – 500 ₽</legend>
                         <div class="range-controls__scale">
-                            <div class="scale-bar"></div>
+                            <div class="scale-bar">
+                                <div class="bar_inner"></div>
+                            </div>
+                            <div class="range-controls__toggle range-controls__toggle_min" tabindex="0"></div>
+                            <div class="range-controls__toggle range-controls__toggle_max" tabindex="0"></div>
                         </div>
-                        <div class="range-controls__toggle-min" tabindex="0"></div>
-                        <div class="range-controls__toggle-max" tabindex="0"></div>
+
                     </fieldset>
                     <fieldset class="catalog-filters__richness filters-richness">
                         <legend class="filters-richness__title">Жирность:</legend>
@@ -166,30 +181,30 @@
                             </li>
                             <li class="catalog-filters__option catalog-filters__radio">
                                 <input class="visually-hidden input-radio catalog-filters__input" type="radio" name="richness" id="richness-more_30">
-                                <label for="1richness-more_30">выше 30%</label>
+                                <label for="richness-more_30">выше 30%</label>
                             </li>
                         </ul>
                     </fieldset>
                     <fieldset class="catalog-filters__filling filters-filling">
                         <legend class="filters-filling__title">Наполнители:</legend>
                         <ul class="filters-filling__list">
-                            <li class="catalog-filters__ catalog-filters__checkbox">
+                            <li class="catalog-filters__option catalog-filters__checkbox">
                                 <input class="visually-hidden input-checkbox catalog-filters__input" type="checkbox" name="chocolate" id="fill-chocolate" checked>
                                 <label for="fill-chocolate">шоколадные</label>
                             </li>
-                            <li class="catalog-filters__ catalog-filters__checkbox">
+                            <li class="catalog-filters__option catalog-filters__checkbox">
                                 <input class="visually-hidden input-checkbox catalog-filters__input" type="checkbox" name="sugar" id="fill-sugar" checked>
                                 <label for="fill-sugar">сахарные присыпки</label>
                             </li>
-                            <li class="catalog-filters__ catalog-filters__checkbox">
+                            <li class="catalog-filters__option catalog-filters__checkbox">
                                 <input class="visually-hidden input-checkbox catalog-filters__input" type="checkbox" name="fruit" id="fill-fruit">
                                 <label for="fill-fruit">фрукты</label>
                             </li>
-                            <li class="catalog-filters__ catalog-filters__checkbox">
+                            <li class="catalog-filters__option catalog-filters__checkbox">
                                 <input class="visually-hidden input-checkbox catalog-filters__input" type="checkbox" name="syrup" id="fill-syrup">
                                 <label for="fill-syrup">сиропы</label>
                             </li>
-                            <li class="catalog-filters__ catalog-filters__checkbox">
+                            <li class="catalog-filters__option catalog-filters__checkbox">
                                 <input class="visually-hidden input-checkbox catalog-filters__input" type="checkbox" name="jam" id="fill-jam">
                                 <label for="fill-jam">джемы</label>
                             </li>
@@ -226,7 +241,7 @@
                         <div class="catalog-item__wrapper"></div>
                         <img src="img/catalog_cream_caramel.png" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
                         <p class="catalog-item__price">415 ₽<span>/кг</span></p>
-                        <h3 class="catalog-item__title">Сливочное крем-брюле с карамельной подливкой</h3>
+                        <h3 class="catalog-item__title">Сливочное крем-брюле <br> с карамельной подливкой</h3>
                         <a class="button catalog__button" href="">Быстрый просмотр</a>
                     </li>
                     <li class="catalog__item catalog-item">
@@ -234,7 +249,7 @@
                         <img src="img/catalog_cowberry.png" alt="Сливочное мороженое с брусничным
                     джемом" width="267" height="267">
                         <p class="catalog-item__price">325 ₽<span>/кг</span></p>
-                        <h3 class="catalog-item__title">Сливочное с брусничным джемом</h3>
+                        <h3 class="catalog-item__title">Сливочное с брусничным <br> джемом</h3>
                         <a class="button catalog__button" href="">Быстрый просмотр</a>
                     </li>
                     <li class="catalog__item catalog-item">
@@ -262,7 +277,7 @@
                         <div class="catalog-item__wrapper"></div>
                         <img src="img/catalog_vanilla-chocolate.png" alt="Сливочно-ванильное мороженое с кусочками шоколада" width="267" height="267">
                         <p class="catalog-item__price">440 ₽<span>/кг</span></p>
-                        <h3 class="catalog-item__title">Сливочно-ванильное с кусочками шоколада</h3>
+                        <h3 class="catalog-item__title">Сливочно-ванильное <br> с кусочками шоколада</h3>
                         <a class="button catalog__button" href="">Быстрый просмотр</a>
                     </li>
                     <li class="catalog__item catalog-item">
@@ -288,7 +303,10 @@
                     </li>
                 </ul>
                 <ul class="pagination__list">
-                    <li class="pagination__item">
+                    <li class="pagination__item pagination__item_disabled">
+                        <a aria-label="Предыдущая страница" href=""></a>
+                    </li>
+                    <li class="pagination__item pagination__item_current">
                         <a aria-label="Первая страница" href="">1</a>
                     </li>
                     <li class="pagination__item">
